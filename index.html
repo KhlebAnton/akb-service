@@ -13,40 +13,25 @@
 <body>
     <div class="modal modal_call">
         <div class="modal__content">
-            <form class="modal-form">
-                <div class="close_modal"></div>
-                <div class="modal-form__title">
-                    Оставьте заявку и мы перезвоним
-                </div>
-                <div class="modal-form__inputs">
-                    <label class="input-label">
-                        <span class="label-text">Ваш номер телефона</span>
-                        <input type="tel" class="phone-input" placeholder="+7 ___ - ___ - __ - __" required>
-                        <span class="input-err-msg">Введите корректный номер</span>
-                    </label>
-                    <div class="input-label el_dropdown--label">
-                        <span class="label-text">Удобное время доставки</span>
-                        <div class="el_dropdown">
-                            <input type="text" name="dilevery" class="el_dropdown--title" value="Максимально срочно"
-                                readonly>
-                            <div class="el_dropdown--hidden">
-                                <ul class="input-dropdown">
-                                    <li class="el_dropdown--item input-dropdown__item">Максимально срочно
-                                    </li>
-                                    <li class="el_dropdown--item input-dropdown__item">До недели</li>
-                                    <li class="el_dropdown--item input-dropdown__item">Согласовать дату</li>
-                                </ul>
-
-                            </div>
+            <form class="block__form">
+                 <div class="close_modal"></div>
+                        <div class="block__form-title">
+                            Оставьте заявку, мастер перезвонит через 180 секунд
                         </div>
-                    </div>
-                    <label class="input-label">
-                        <span class="label-text">Адрес доставки</span>
-                        <input type="text" name="adress" placeholder="Введите адрес" required>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn_primary">Отправить</button>
-            </form>
+                        <label class="input-label">
+                            <span class="label_hidden">Введите номер Телефона</span>
+                            <input type="tel" class="phone-input" required="" placeholder="+7 (___) ___-__-__">
+                            <span class="input-err-msg">Введите корректный номер</span>
+                        </label>
+
+                        <div class="block__form-bottom">
+                            <button type="submit" class="btn btn_primary btn_hero_form">Вызвать мастера</button>
+                            <span class="politic_access">
+                                Оставляя заявку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+                            </span>
+                        </div>
+                    </form>
+           
 
         </div>
     </div>
@@ -306,8 +291,8 @@
                             </a>
                         </div>
                     </div>
-                    <form class="hero__form">
-                        <div class="hero__form-title">
+                    <form class="block__form hero-form">
+                        <div class="block__form-title">
                             Оставьте заявку, мастер перезвонит через 180 секунд
                         </div>
                         <label class="input-label">
@@ -316,7 +301,7 @@
                             <span class="input-err-msg">Введите корректный номер</span>
                         </label>
 
-                        <div class="hero__form-bottom">
+                        <div class="block__form-bottom">
                             <button type="submit" class="btn btn_primary btn_hero_form">Вызвать мастера</button>
                             <span class="politic_access">
                                 Оставляя заявку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>

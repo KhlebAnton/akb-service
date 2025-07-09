@@ -786,11 +786,11 @@ label {
     line-height: 32px;
 }
 
-.hero__form {
+.block__form {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    max-width: 409px;
+    
     width: 100%;
     padding: 40px;
     border-radius: 16px;
@@ -799,20 +799,22 @@ label {
     height: fit-content;
     text-align: center;
 }
-
+.block__form.hero-form {
+    max-width: 409px;
+}
 .btn_hero_form {
     max-width: none;
     width: 100%;
 }
 
-.hero__form-title {
+.block__form-title {
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
     letter-spacing: -0.5px;
 }
 
-.hero__form-bottom {
+.block__form-bottom {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1383,7 +1385,7 @@ label {
         align-items: center;
     }
 
-    .hero__form {
+    .block__form.hero-form  {
         margin: 0 auto;
     }
 
@@ -1454,7 +1456,7 @@ label {
         padding: 0;
     }
 
-    .hero__form {
+    .block__form.hero-form  {
         margin-bottom: -224px;
         max-width: none;
         outline: none;
