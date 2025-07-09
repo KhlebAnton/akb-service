@@ -1,26 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const brandSwiper = new Swiper('.brand-swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-   
-    navigation: {
-      nextEl: '.custom-swiper-button-next',
-      prevEl: '.custom-swiper-button-prev',
-    },
-    breakpoints: {
-      860: {
-        spaceBetween: 20
-      }
-      
-    }
-  });
-  
-  window.addEventListener('resize', function() {
-    brandSwiper.update();
-  });
+document.addEventListener('DOMContentLoaded', function () {
+    const brandSwiper = new Swiper('.brand-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+
+        navigation: {
+            nextEl: '.custom-swiper-button-next',
+            prevEl: '.custom-swiper-button-prev',
+        },
+        breakpoints: {
+            860: {
+                spaceBetween: 20
+            }
+
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        brandSwiper.update();
+    });
 
 
-  const sectionSelection = document.querySelector('.section_selection');
+    const sectionSelection = document.querySelector('.section_selection');
     const steps = sectionSelection.querySelectorAll('.selection-step');
     const nextBtn = document.getElementById('selection-next-btn');
     const currentStepDisplay = sectionSelection.querySelector('.current-step');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Обработчик изменения полей (убираем ошибку при вводе)
     step2RequiredInputs.forEach(input => {
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             if (this.value.trim() !== '') {
                 this.closest('.input-label').classList.remove('input-err');
             }
@@ -68,18 +68,18 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (currentStep === steps.length - 1) {
             // Валидация без предварительного сброса ошибок
             const hasErrors = validateStep2();
-            
+
             if (hasErrors) {
                 step2Error.style.display = 'block';
                 return;
             }
-            
+
             // Дополнительная проверка перед расчетом
             if (sectionSelection.querySelectorAll('.input-err').length > 0) {
                 step2Error.style.display = 'block';
                 return;
             }
-            
+
             step2Error.style.display = 'none';
             calculatePrice();
         }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         step2RequiredInputs.forEach(input => {
             const inputLabel = input.closest('.input-label');
-            
+
             if (input.value.trim() === '') {
                 hasErrors = true;
                 inputLabel.classList.add('input-err');
