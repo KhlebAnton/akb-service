@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АКБ-Сервис 24</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -24,7 +25,7 @@
                     <a href="#" class="btn_link btn_whatsapp ">
                     </a>
                     <a href="#" class="btn_link btn_tg ">
-                       
+
                     </a>
                 </div>
 
@@ -395,14 +396,273 @@
                 </div>
             </div>
         </section>
+        <section class="section section_selection">
+            <div class="container flex-row">
+                <div class="section_title">
+                    <h2>
+                        Подбор аккумулятора по марке автомобиля
+                    </h2>
+                </div>
+                <div class="selection_wrapper">
+                    <div class="selection-step is-visible" data-step="0">
+                        <div class="brand-container flex-row">
+                            <div class="selection__top">
+                                <div class="selection__title">Выберите марку авто</div>
+                                <span class="selection__err-msg">Не выбрана марка</span>
+                            </div>
+
+                            <div class="brand-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item ">
+                                            <img src="./img/brands/audi.png" alt="Audi" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Audi
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/alfaRome.png" alt="Alfa Romeo"
+                                                class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Alfa Romeo
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/bmv.png" alt="BMW" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                BMW
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/aston.png" alt="Aston Martin"
+                                                class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Aston Martin
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/ford.png" alt="Ford" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Ford
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/aurus.png" alt="Aurus" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Aurus
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/hynday.png" alt="Hyundai" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Hyundai
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/byd.png" alt="Byd" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Byd
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/merc.png" alt="Mercedes" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Mercedes
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/chrysler.png" alt="Chrysler"
+                                                class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Chrysler
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/mitsu.png" alt="Mitsubishi" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Mitsubishi
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/chevr.png" alt="Chevrolet" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Chevrolet
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/citr.png" alt="Citroen" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Citroen
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/toyota.png" alt="Toyota" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Toyota
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/volcw.png" alt="volkswagen" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Volkswagen
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/porsh.png" alt="porsche" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Porsche
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/lada.png" alt="ВАЗ (LADA)" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                ВАЗ (LADA)
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/daih.png" alt="Daihatsu" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                Daihatsu
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/lada.png" alt="ВАЗ (LADA)" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/daih.png" alt="Daihatsu" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/lada.png" alt="ВАЗ (LADA)" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/daih.png" alt="Daihatsu" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/lada.png" alt="ВАЗ (LADA)" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/daih.png" alt="Daihatsu" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide brand-row">
+                                        <div class="brand-item">
+                                            <img src="./img/brands/lada.png" alt="ВАЗ (LADA)" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                        <div class="brand-item">
+                                            <img src="./img/brands/daih.png" alt="Daihatsu" class="brand-item__logo">
+                                            <span class="brand-item__title">
+                                                другая Марка
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="brand-swiper_nav">
+                                    <div class="selection-swiper-button-prev"></div>
+                                    <div class="selection-swiper-button-next"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selection-step " data-step="1">
+                        <div class="selection__form flex-row">
+                            <div class="selection__top">
+                                <div class="selection__title">Заполните данные</div>
+                                <span class="selection__err-msg">Заполните корректно данные</span>
+                            </div>
+                            <div class="selection__form-inputs">
+                                <label class="input-label">
+                                    <span class="label-text">Ваш номер телефона</span>
+                                    <input type="tel" class="phone-input" placeholder="+7 ___ - ___ - __ - __" required>
+                                    <span class="input-err-msg">Введите корректный номер</span>
+                                </label>
+                                <div class="input-label el_dropdown--label">
+                                    <span class="label-text">Удобное время доставки</span>
+                                    <div class="el_dropdown">
+                                        <input type="text" name="dilevery" class="el_dropdown--title" value="Максимально срочно" readonly>
+                                        <div class="el_dropdown--hidden">
+                                            <ul class="input-dropdown">
+                                                <li class="el_dropdown--item input-dropdown__item">Максимально срочно</li>
+                                                <li class="el_dropdown--item input-dropdown__item">До недели</li>
+                                                <li class="el_dropdown--item input-dropdown__item">Согласовать дату</li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="input-label">
+                                    <span class="label-text">Адрес доставки</span>
+                                    <input type="text" name="adress"  placeholder="Введите адрес" required>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selection__bottom">
+                        <div class="selection__steps">
+                            <span>Шаг</span>
+                            <span class="current-step">1</span>
+                            <span>из</span>
+                            <span class="total-steps">2</span>
+                        </div>
+                        <div class="btn btn_primary btn--size-s" id="selection-next-btn">Продолжить</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section></section>
     </main>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./scripts/header.js"></script>
 
     <script src="./scripts/dropdown.js"></script>
     <script src="./scripts/form.js"></script>
+    <script src="./scripts/selection.js"></script>
 </body>
 
 </html>

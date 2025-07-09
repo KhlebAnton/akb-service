@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         items.forEach(item => {
             item.addEventListener('click', function(e) {
-                title.setAttribute('title',this.textContent.trim())
-                title.textContent = this.textContent.trim();
+                if (title.tagName === 'INPUT') {
+                    title.value = this.textContent.trim();
+                    title.setAttribute('value', this.textContent.trim());
+                } else {
+                    title.setAttribute('title', this.textContent.trim());
+                    title.textContent = this.textContent.trim();
+                }
                 dropdown.classList.remove('is-open');
             });
         });

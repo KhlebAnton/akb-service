@@ -75,7 +75,7 @@ input {
     font-weight: 500;
     color: #eb4444;
     position: absolute;
-    top: calc(100% + 8px);
+    top: 100%;
     left: 0;
     display: none;
 }
@@ -144,14 +144,48 @@ h2 {
 ul {
     padding-left: 20px;
 }
-
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.label-text {
+    font-size: 16px;
+    line-height: 22px;
+    color: #969FA6;
+}
+.input-dropdown {
+    background-color: #ffffff;
+    padding: 16px 0;
+    border-radius: 12px;
+    border: 2px solid #acb9c2;
+    list-style: none;
+}
+.input-dropdown__item {
+   padding: 6px 20px;
+    
+}
+.input-dropdown__item:hover {
+    background-color: #e6e6e6;
+}
 .container {
     max-width: calc(1271px + (var(--padding-container) * 2));
     margin: 0 auto;
     width: 100%;
     padding: 0 var(--padding-container);
 }
-
+.el_dropdown--label {
+    position: relative;
+}
+.el_dropdown--label .el_dropdown::after {
+    content: '';
+   position: absolute;
+   height: 20px;
+   top: 14px;
+   right: 16px;
+    width: 20px;
+    background: url('../img/icons/chevron-down.svg') 50% / contain no-repeat;
+}
 .el_dropdown {
     position: relative;
     cursor: pointer;
@@ -162,9 +196,12 @@ ul {
     left: 0;
     top: calc(100% + 10px);
     min-width: 100%;
+    z-index: 2;
     display: none;
 }
-
+.el_dropdown--title {
+    pointer-events: none;
+}
 .el_dropdown.is-open .el_dropdown--hidden {
     display: block;
 }
@@ -189,7 +226,12 @@ ul {
     justify-content: center;
     width: fit-content;
 }
-
+.btn--size-s {
+    height: 40px;
+    padding: 4px 16px;
+    font-size: 16px;
+    line-height: 32px;
+}
 .btn_primary {
     background-color: var(--color-accent);
     border: 2px solid var(--color-accent);
@@ -864,7 +906,161 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
 }
+/* selection */
+.section_selection {
+    overflow: hidden;
+}
+.selection-step {
+    display: none;
+}
+.selection-step.is-visible {
+    display: block;
+}
+.selection_wrapper {
+    padding: 32px;
+    border-radius: 16px;
+    background: #FFFFFF;
+border: 1px solid #118DE8;
+position: relative;
+display: flex;
+flex-direction: column;
+gap: 52px;
 
+
+}
+.brand-container {
+    overflow-x: hidden;
+}
+.selection__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+.selection__bottom {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+.selection__steps {
+    font-size: 16px;
+    line-height: 26px;
+    color: #676767;
+}
+.brand-swiper {
+    width: 100%;
+    overflow: hidden;
+}
+.brand-row {
+    max-width: 114px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+.brand-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #009deb00;
+    transition: all .3s ease;
+}
+.brand-item:hover {
+      border: 1px solid #009debda;
+      background-color: #EEF8FF;
+}
+.brand-item__title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #118DE8;
+}
+.brand-item.is-checked {
+     border: 1px solid #009debda;
+      background-color: #EEF8FF;
+}
+.brand-item__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.selection-swiper-button-prev,
+.selection-swiper-button-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #118ee8;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -20px;
+    z-index: 2;
+    background-color: #ffffff;
+    top: 50%;
+    cursor: pointer;
+}
+.selection-swiper-button-next{ 
+    left: auto;
+    right: -20px;
+}
+.selection-swiper-button-prev:hover ,
+.selection-swiper-button-next:hover {
+    background-color: #EEF8FF;
+}
+.selection-swiper-button-prev::before ,
+.selection-swiper-button-next::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('../img/icons/chevron-right.svg')50% / contain no-repeat;
+}
+.selection-swiper-button-prev::before {
+    transform: scale(-1, 1);
+}
+.selection__top {
+        padding-right: 60px;
+        position: relative;
+    }
+.selection__err-msg {
+    position: absolute;
+    left: 0;
+    top: 100% ;
+    color: #eb4444;
+    display: none;
+}
+.selection__err-msg.is-visible {
+    display: block;
+}
+.selection__form> * {
+    position: relative;
+    z-index: 1;
+}
+.selection__form::after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('../img/image\(Traced\).png') 100% 100% / contain no-repeat;
+}
+.selection__form-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    max-width: 690px;
+    width: 100%;
+}
+.selection__form-inputs label:last-child {
+    grid-column: 1 / 3;
+}
 @media (max-width:1300px) {
     .header__content-right .header__tel {
         display: none;
@@ -1047,9 +1243,60 @@ ul {
             linear-gradient(180deg, rgba(10, 14, 34, 0) 0%, #0A0E22 100%);
 
     }
+    .selection_wrapper {
+        padding: 20px;
+        gap: 24px;
+    }
+    .brand-row {
+        gap: 32px;
+        
+    }
+    .brand-swiper_nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+    }
+    .selection-swiper-button-prev,
+    .selection-swiper-button-next {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border: 0;
+        position: static;
 
+    }
+      .selection-swiper-button-prev::before,
+    .selection-swiper-button-next::before {
+        width: 24px;
+        height: 24px;
+    }   
+    
+    .selection__bottom {
+        flex-direction: column-reverse;
+        width: 100%;
+
+    }
+    .selection__bottom .btn {
+        width: 100%;
+    }
+    .brand-item__logo {
+        width: 50px;
+        height: 50px;
+    }
+    .brand-item__title {
+        font-size: 14px;
+    }
 }
-
+@media (max-width:650px) {
+.selection__form-inputs {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.selection__form-inputs label:last-child {
+    grid-column: auto;
+}
+}
 @media (max-width:550px) {
     .about__items {
         grid-template-columns: 1fr;
