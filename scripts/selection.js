@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     spaceBetween: 0,
    
     navigation: {
-      nextEl: '.selection-swiper-button-next',
-      prevEl: '.selection-swiper-button-prev',
+      nextEl: '.custom-swiper-button-next',
+      prevEl: '.custom-swiper-button-prev',
     },
     breakpoints: {
       860: {

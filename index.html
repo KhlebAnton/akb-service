@@ -11,7 +11,46 @@
 </head>
 
 <body>
-    <div class="modal modal_mobile_call">
+    <div class="modal modal_call">
+        <div class="modal__content">
+            <form class="modal-form">
+                <div class="close_modal"></div>
+                <div class="modal-form__title">
+                    Оставьте заявку и мы перезвоним
+                </div>
+                <div class="modal-form__inputs">
+                    <label class="input-label">
+                        <span class="label-text">Ваш номер телефона</span>
+                        <input type="tel" class="phone-input" placeholder="+7 ___ - ___ - __ - __" required>
+                        <span class="input-err-msg">Введите корректный номер</span>
+                    </label>
+                    <div class="input-label el_dropdown--label">
+                        <span class="label-text">Удобное время доставки</span>
+                        <div class="el_dropdown">
+                            <input type="text" name="dilevery" class="el_dropdown--title" value="Максимально срочно"
+                                readonly>
+                            <div class="el_dropdown--hidden">
+                                <ul class="input-dropdown">
+                                    <li class="el_dropdown--item input-dropdown__item">Максимально срочно
+                                    </li>
+                                    <li class="el_dropdown--item input-dropdown__item">До недели</li>
+                                    <li class="el_dropdown--item input-dropdown__item">Согласовать дату</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <label class="input-label">
+                        <span class="label-text">Адрес доставки</span>
+                        <input type="text" name="adress" placeholder="Введите адрес" required>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn_primary">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="modal modal_mobile_call ">
         <div class="modal__content connection-block__wrapper">
             <div class="connection-block__wrapper-title">
                 Вызвать мастера
@@ -600,8 +639,8 @@
                                     </div>
                                 </div>
                                 <div class="brand-swiper_nav">
-                                    <div class="selection-swiper-button-prev"></div>
-                                    <div class="selection-swiper-button-next"></div>
+                                    <div class="custom-swiper-button-prev"></div>
+                                    <div class="custom-swiper-button-next"></div>
                                 </div>
 
                             </div>
@@ -623,20 +662,22 @@
                                 <div class="input-label el_dropdown--label">
                                     <span class="label-text">Удобное время доставки</span>
                                     <div class="el_dropdown">
-                                        <input type="text" name="dilevery" class="el_dropdown--title" value="Максимально срочно" readonly>
+                                        <input type="text" name="dilevery" class="el_dropdown--title"
+                                            value="Максимально срочно" readonly>
                                         <div class="el_dropdown--hidden">
                                             <ul class="input-dropdown">
-                                                <li class="el_dropdown--item input-dropdown__item">Максимально срочно</li>
+                                                <li class="el_dropdown--item input-dropdown__item">Максимально срочно
+                                                </li>
                                                 <li class="el_dropdown--item input-dropdown__item">До недели</li>
                                                 <li class="el_dropdown--item input-dropdown__item">Согласовать дату</li>
                                             </ul>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
                                 <label class="input-label">
                                     <span class="label-text">Адрес доставки</span>
-                                    <input type="text" name="adress"  placeholder="Введите адрес" required>
+                                    <input type="text" name="adress" placeholder="Введите адрес" required>
                                 </label>
                             </div>
                         </div>
@@ -653,16 +694,101 @@
                 </div>
             </div>
         </section>
+        <section class="section section_swiper-product">
+            <div class="container flex-row">
+                <div class="section_title">
+                    <h2>
+                        Купить автомобильный аккумулятор с доставкой и установкой в {Город}
+                    </h2>
+                </div>
+                <div class="product-swiper__wrapper">
+                    <div class="product-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="./img/products/1.png" alt="аккумулятор 1" class="product-card__img">
+                                    <div class="product-card__info">
+                                        <a href="#" class="product-card__title">
+                                            Аккумулятор JAPAN STAR 56219 SMF обратная полярность
+                                        </a>
+                                        <div class="product-card__bottom">
+                                            <span class="product-card__price">от 8 200 ₽</span>
+                                            <div class="btn btn--size-m btn_primary btn_modal-call">Купить с установкой
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="./img/products/2.png" alt="аккумулятор 2" class="product-card__img">
+                                    <div class="product-card__info">
+                                        <a href="#" class="product-card__title">
+                                            Аккумулятор AKOM обратная полярность
+                                        </a>
+                                        <div class="product-card__bottom">
+                                            <span class="product-card__price">от 5 800 ₽</span>
+                                            <div class="btn btn--size-m btn_primary btn_modal-call">Купить с установкой
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="./img/products/3.png" alt="аккумулятор 3" class="product-card__img">
+                                    <div class="product-card__info">
+                                        <a href="#" class="product-card__title">
+                                            Аккумулятор THOR 56219 SMF обратная полярность
+                                        </a>
+                                        <div class="product-card__bottom">
+                                            <span class="product-card__price">от 7 700 ₽</span>
+                                            <div class="btn btn--size-m btn_primary btn_modal-call">Купить с установкой
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="./img/products/4.png" alt="аккумулятор 4" class="product-card__img">
+                                    <div class="product-card__info">
+                                        <a href="#" class="product-card__title">
+                                            Аккумулятор ROCKET SMF 75L L3 обратная полярность
+                                        </a>
+                                        <div class="product-card__bottom">
+                                            <span class="product-card__price">от 9 000 ₽</span>
+                                            <div class="btn btn--size-m btn_primary btn_modal-call">Купить с установкой
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product-swiper_nav">
+                        <div class="custom-swiper-button-prev button-swiper-grey"></div>
+                        <div class="custom-swiper-pagination"></div>
+                        <div class="custom-swiper-button-next button-swiper-grey"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
         <section></section>
     </main>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 
     <script src="./scripts/header.js"></script>
-
+    <script src="./scripts/modal.js"></script>
     <script src="./scripts/dropdown.js"></script>
     <script src="./scripts/form.js"></script>
     <script src="./scripts/selection.js"></script>
+    <script src="./scripts/swiper-product.js"></script>
 </body>
 
 </html>
