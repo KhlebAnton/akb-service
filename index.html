@@ -170,7 +170,8 @@
                         </div>
                         <label class="input-label">
                             <span class="label_hidden">Введите номер Телефона</span>
-                            <input type="tel" class="phone-input" required placeholder="+7 (___) ___-__-__">
+                            <input type="tel" class="phone-input" name="phone" data-mask="+7 999 999 99 99" required
+                                placeholder="+7 (___) ___-__-__">
                             <span class="input-err-msg">Введите корректный номер</span>
                         </label>
 
@@ -305,7 +306,6 @@
                         <div class="brand-container flex-column">
                             <div class="selection__top">
                                 <div class="selection__title">Выберите марку авто</div>
-                                <span class="selection__err-msg">Не выбрана марка</span>
                             </div>
 
                             <div class="brand-swiper">
@@ -511,10 +511,11 @@
                                 <div class="selection__title">Заполните данные</div>
                                 <span class="selection__err-msg">Заполните корректно данные</span>
                             </div>
-                            <div class="selection__form-inputs">
+                            <form class="selection__form-inputs">
                                 <label class="input-label">
                                     <span class="label-text">Ваш номер телефона</span>
-                                    <input type="tel" class="phone-input" placeholder="+7 ___ - ___ - __ - __" required>
+                                    <input type="tel" class="phone-input" name="phone" data-mask="+7 999 999 99 99"
+                                        placeholder="+7 ___ - ___ - __ - __" required>
                                     <span class="input-err-msg">Введите корректный номер</span>
                                 </label>
                                 <div class="input-label el_dropdown--label">
@@ -537,7 +538,10 @@
                                     <span class="label-text">Адрес доставки</span>
                                     <input type="text" name="adress" placeholder="Введите адрес" required>
                                 </label>
-                            </div>
+                                <label class="label_hidden">
+                                    <input type="text" name="brand">
+                                </label>
+                            </form>
                         </div>
                     </div>
                     <div class="selection__bottom">
@@ -548,6 +552,8 @@
                             <span class="total-steps">2</span>
                         </div>
                         <div class="btn btn_primary btn--size-s" id="selection-next-btn">Продолжить</div>
+                        <button class="btn btn_primary btn--size-s is-hidden" id="selection-form-btn">Рассчитать
+                            стоимость</button>
                     </div>
                 </div>
             </div>
@@ -1404,6 +1410,379 @@
 
             </div>
         </section>
+        <section class="section section_crew">
+            <div class="container flex-column">
+                <div class="section_title">
+                    <h2>Наши экипажи в Москва</h2>
+                </div>
+                <div class="crew-container">
+                    <div class="crew-item">
+                        <div class="crew-item__top">
+                            <div class="crew-item__img_wrapper">
+                                <div class="rating">
+                                    <div class="rating_count">
+                                        4.5
+                                    </div>
+                                    <div class="rating_score">14 оценок</div>
+                                </div>
+                                <img src="./img/crew/1.png" alt="Сидоренко">
+                                <a href="./" class="crew-item-btn-photo">+22</a>
+                            </div>
+                            <div class="crew-item__stat-container">
+                                <div class="crew-item__stat icon_calendar">
+                                    Опыт 9 лет
+                                </div>
+                                <div class="crew-item__stat icon_certif">
+                                    Гарантия
+                                </div>
+                                <div class="crew-item__stat icon_check">
+                                    Работа по договору
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crew-item__bottom">
+                            <div class="crew-item__info">
+                                <div class="crew-item__info-name">
+                                    Роман Сидоренко
+                                </div>
+                                <div class="crew-item__info-status">
+                                    <span class="crew-item__info-status-city">
+                                        г. Москва
+                                    </span>
+                                    <span>
+                                        Последний заказ: 1 день назад
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="crew-item__text">
+                                Роман — опытный автоэлектрик с выездом по Москве и области. <br>Более 9 лет решает
+                                сложные
+                                задачи по ремонту автоэлектрики, генераторов, стартеров и стеклоподъёмников....
+                                <a href="./">Читать ещё</a>
+                            </div>
+                            <div class="crew-item__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/1.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/2.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/3.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                </div>
+                                <div class="crew-button-prev"></div>
+                                <div class="crew-button-next"></div>
+                            </div>
+                            <div class="crew-item__service-container">
+                                <div class="crew-item__service-items">
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Автоэлектрик с выездом
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт генератора
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1000 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт стеклоподъемника
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="./" class="link-all-services">Все услуги</a>
+                            </div>
+                            <div class="crew-item__btn">
+                                <a href="tel:+7" class="btn btn_primary btn_icon_phone">
+                                    <span>Позвонить</span>
+                                </a>
+                                <div class="crew-item__link-container">
+                                    <a href="./" class="btn_link btn_whatsapp btn_link--size-s">
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    <a href="./" class="btn_link btn_tg btn_link--size-s">
+                                        <span>Telegram</span>
+                                    </a>
+
+                                </div>
+                                <div class="btn btn-thrid btn_modal-call">Оставить заявку</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crew-item">
+                        <div class="crew-item__top">
+                            <div class="crew-item__img_wrapper">
+                                <div class="rating">
+                                    <div class="rating_count">
+                                        4.5
+                                    </div>
+                                    <div class="rating_score">22 оценок</div>
+                                </div>
+                                <img src="./img/crew/2.png" alt="Сидоренко">
+                                <a href="./" class="crew-item-btn-photo">+22</a>
+                            </div>
+                            <div class="crew-item__stat-container">
+                                <div class="crew-item__stat icon_calendar">
+                                    Опыт 9 лет
+                                </div>
+                                <div class="crew-item__stat icon_certif">
+                                    Гарантия
+                                </div>
+                                <div class="crew-item__stat icon_check">
+                                    Работа по договору
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crew-item__bottom">
+                            <div class="crew-item__info">
+                                <div class="crew-item__info-name">
+                                    Валентин Сидоренко
+                                </div>
+                                <div class="crew-item__info-status">
+                                    <span class="crew-item__info-status-city">
+                                        г. Москва
+                                    </span>
+                                    <span>
+                                        Последний заказ: 1 день назад
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="crew-item__text">
+                                Валентин — надёжный мастер с большим опытом работы в автоэлектрике. <br>
+                                Выезжает быстро, приезжает вовремя и точно знает, с чего начать. Устраняет проблемы с
+                                генератором, проводкой, стеклоподъёмниками и не только...
+                                <a href="./">Читать ещё</a>
+                            </div>
+                            <div class="crew-item__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/6.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/7.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/8.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                </div>
+                                <div class="crew-button-prev"></div>
+                                <div class="crew-button-next"></div>
+                            </div>
+                            <div class="crew-item__service-container">
+                                <div class="crew-item__service-items">
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Автоэлектрик с выездом
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт генератора
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1000 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт стеклоподъемника
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="./" class="link-all-services">Все услуги</a>
+                            </div>
+                            <div class="crew-item__btn">
+                                <a href="tel:+7" class="btn btn_primary btn_icon_phone">
+                                    <span>Позвонить</span>
+                                </a>
+                                <div class="crew-item__link-container">
+                                    <a href="./" class="btn_link btn_whatsapp btn_link--size-s">
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    <a href="./" class="btn_link btn_tg btn_link--size-s">
+                                        <span>Telegram</span>
+                                    </a>
+
+                                </div>
+                                <div class="btn btn-thrid btn_modal-call">Оставить заявку</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crew-item">
+                        <div class="crew-item__top">
+                            <div class="crew-item__img_wrapper">
+                                <div class="rating">
+                                    <div class="rating_count">
+                                        4.5
+                                    </div>
+                                    <div class="rating_score">14 оценок</div>
+                                </div>
+                                <img src="./img/crew/3.png" alt="Сидоренко">
+                                <a href="./" class="crew-item-btn-photo">+22</a>
+                            </div>
+                            <div class="crew-item__stat-container">
+                                <div class="crew-item__stat icon_calendar">
+                                    Опыт 9 лет
+                                </div>
+                                <div class="crew-item__stat icon_certif">
+                                    Гарантия
+                                </div>
+                                <div class="crew-item__stat icon_check">
+                                    Работа по договору
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crew-item__bottom">
+                            <div class="crew-item__info">
+                                <div class="crew-item__info-name">
+                                    Роман Сидоренко
+                                </div>
+                                <div class="crew-item__info-status">
+                                    <span class="crew-item__info-status-city">
+                                        г. Москва
+                                    </span>
+                                    <span>
+                                        Последний заказ: 1 день назад
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="crew-item__text">
+                                Роман — опытный автоэлектрик с выездом по Москве и области. <br>Более 9 лет решает
+                                сложные
+                                задачи по ремонту автоэлектрики, генераторов, стартеров и стеклоподъёмников....
+                                <a href="./">Читать ещё</a>
+                            </div>
+                            <div class="crew-item__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/1.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/2.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/3.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/4.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/crew/swiper/5.png" alt="Работа" class="crew-item__swiper_img">
+                                    </div>
+                                </div>
+                                <div class="crew-button-prev"></div>
+                                <div class="crew-button-next"></div>
+                            </div>
+                            <div class="crew-item__service-container">
+                                <div class="crew-item__service-items">
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Автоэлектрик с выездом
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт генератора
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1000 руб.
+                                        </span>
+                                    </div>
+                                    <div class="crew-item__service">
+                                        <span>
+                                            Ремонт стеклоподъемника
+                                        </span>
+                                        <span class="crew-item__service-price">
+                                            от 1500 руб.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="./" class="link-all-services">Все услуги</a>
+                            </div>
+                            <div class="crew-item__btn">
+                                <a href="tel:+7" class="btn btn_primary btn_icon_phone">
+                                    <span>Позвонить</span>
+                                </a>
+                                <div class="crew-item__link-container">
+                                    <a href="./" class="btn_link btn_whatsapp btn_link--size-s">
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    <a href="./" class="btn_link btn_tg btn_link--size-s">
+                                        <span>Telegram</span>
+                                    </a>
+
+                                </div>
+                                <div class="btn btn-thrid btn_modal-call">Оставить заявку</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="./" class="btn btn_second btn--size-l ">Показать еще</a>
+                <div class="page-counter-container">
+                    <div class="page-btn-prev is-hidden"></div>
+                    <a href="./" class="page-count">1</a>
+                    <a href="./" class="page-count">2</a>
+                    <a href="./" class="page-count">3</a>
+                    <a href="./" class="page-count">4</a>
+                    <a href="./" class="page-count">5</a>
+                    <div class="page-btn-next"></div>
+                </div>
+            </div>
+        </section>
         <section class="section section_stage">
             <div class="container">
                 <div class="blue_bg flex-column">
@@ -1596,7 +1975,376 @@
                 </div>
             </div>
         </section>
+        <section class="section section_where">
+            <div class="container flex-column">
+                <div class="section_title">
+                    <h2>Где купить аккумулятор для авто в Москве с доставкой и установкой?</h2>
+                </div>
+                <p class="section_text">
+                    Всё зависит от количества потребителей энергии. Если на автомобиле установлены штатные системы, то
+                    смысла в АКБ большей ёмкости нет. А вот если планируются (или уже установлены) дополнительные
+                    потребители энергии (например, мощная акустическая система, дополнительная подсветка), то необходимо
+                    выбирать аккумулятор большей ёмкости, чем рекомендовал производитель авто.
+                </p>
+            </div>
+        </section>
+        <section class="section section_crew-single">
+            <div class="container">
+                <div class="crew-item crew-item--single">
+                    <div class="crew-item__top">
+                        <div class="crew-item__img_wrapper">
+                            <div class="rating">
+                                <div class="rating_count">
+                                    4.5
+                                </div>
+                                <div class="rating_score">22 оценок</div>
+                            </div>
+                            <img src="./img/crew/2.png" alt="Сидоренко">
 
+                        </div>
+
+                    </div>
+                    <div class="crew-item__bottom">
+                        <div class="crew-item__info">
+                            <div class="crew-item__info-name">
+                                Валентин Сидоренко
+                            </div>
+                            <div class="crew-item__info-status">
+                                <span class="crew-item__info-status-city">
+                                    г. Москва
+                                </span>
+                                <span>
+                                    Последний заказ: 1 день назад
+                                </span>
+                            </div>
+                            <div class="crew-item__stat-container">
+                                <div class="crew-item__stat icon_calendar">
+                                    Опыт 9 лет
+                                </div>
+                                <div class="crew-item__stat icon_certif">
+                                    Гарантия
+                                </div>
+                                <div class="crew-item__stat icon_check">
+                                    Работа по договору
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crew-item__text">
+                            Валентин — надёжный мастер с большим опытом работы в автоэлектрике. <br>
+                            Выезжает быстро, приезжает вовремя и точно знает, с чего начать. Устраняет проблемы с
+                            генератором, проводкой, стеклоподъёмниками и не только...
+                            <a href="./">Читать ещё</a>
+                        </div>
+
+                        <div class="crew-item__btn">
+                            <a href="tel:+7" class="btn btn_primary btn_icon_phone">
+                                <span>Позвонить</span>
+                            </a>
+                            <div class="crew-item__link-container">
+                                <a href="./" class="btn_link btn_whatsapp btn_link--size-s">
+                                    <span>WhatsApp</span>
+                                </a>
+                                <a href="./" class="btn_link btn_tg btn_link--size-s">
+                                    <span>Telegram</span>
+                                </a>
+
+                            </div>
+                            <div class="btn btn-thrid btn_modal-call">Оставить заявку</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section_work">
+            <div class="container flex-column">
+                <div class="section_title section_title--swiper">
+                    <h2>Примеры работ</h2>
+                    <div class="work-swiper_nav">
+                        <div class="custom-work-prev"></div>
+                        <div class="custom-work-next"></div>
+                    </div>
+                </div>
+                <div class="work-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide work-item">
+                            <img src="./img/work/1.png" alt="Работа" class="work-item__img">
+                            <p>
+                                Замена аккумулятора на Hyndai Soalaris с выездом
+                            </p>
+                        </div>
+                        <div class="swiper-slide  work-item">
+                            <img src="./img/work/2.png" alt="Работа" class="work-item__img">
+                            <p>
+                                Ремонт генератора на Opel Astra в условиях парковки
+                            </p>
+                        </div>
+                        <div class="swiper-slide work-item">
+                            <img src="./img/work/3.png" alt="Работа" class="work-item__img">
+                            <p>
+                                Ремонт электропроводки и монтаж освещения в салоне Skoda Octavia
+                            </p>
+                        </div>
+                        <div class="swiper-slide work-item">
+                            <img src="./img/work/4.png" alt="Работа" class="work-item__img">
+                            <p>
+                                Подключение сигнализации на Ford Focus с настройкой брелка
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+        <section class="section section_price_services">
+            <div class="container">
+                <div class="grid_sticky">
+                    <div class="crew-item__service-container">
+                        <div class="section_title ">
+                            <h2>Цены на услуги в Москва</h2>
+                        </div>
+                        <div class="crew-item__service-items crew-item__service-items--more">
+                            <div class="crew-item__service">
+                                <span>
+                                    Диагностика электрооборудования а автомобиле
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1500 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Выезд автоэлектрика на дом
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1000 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Замена аккумулятора
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 800 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Ремонт генератора
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1200 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Поиск и устранение короткого замыкания
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1500 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Ремонт стартера
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1500 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Установка сигнализации
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 2500 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Подключение видеорегистратора
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 900 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Ремонт проводки
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1300 руб.
+                                </span>
+                            </div>
+                            <div class="crew-item__service">
+                                <span>
+                                    Замена блока предохранителей
+                                </span>
+                                <span class="crew-item__service-price">
+                                    от 1500 руб.
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a href="./" class="link-all-services">Ещё 25</a>
+                    </div>
+                    <div class="connection-block__wrapper block_sticky">
+                        <div class="connection-block__wrapper-info">
+                            <div class="connection-block__wrapper-title">
+                                Прикурить машину
+                            </div>
+                            <p class="connection-block__wrapper-text">
+                                Выезд матсера от 15 минут до 1 часа в любом районе {Город} - круглосуточно 24/7
+                            </p>
+                        </div>
+
+                        <form class="connection-block__form">
+                            <label class="input-label">
+                                <span class="label_hidden">Введите номер Телефона</span>
+                                <input type="tel" class="phone-input" name="phone" data-mask="+7 999 999 99 99"
+                                    required="" placeholder="+7 (___) ___-__-__">
+                                <span class="input-err-msg">Введите корректный номер</span>
+                            </label>
+                            <button type="submit" class="btn btn_primary ">Вызвать мастера</button>
+                            <span class="politic_access">
+                                Оставляя заявку, вы соглашаетесь с нашей <a href="./">Политикой конфиденциальности</a>
+                            </span>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="section section_reviews">
+            <div class="container flex-column">
+                <div class="section_title">
+                    <h2>Отзывы (3)</h2>
+                    <div class="input-label el_dropdown--label reviews-filter">
+
+                        <div class="el_dropdown">
+                            <input type="text" name="reviews" class="el_dropdown--title" value="Сначала положительные"
+                                readonly="">
+                            <div class="el_dropdown--hidden">
+                                <ul class="input-dropdown">
+                                    <li class="el_dropdown--item input-dropdown__item">Сначала положительные
+                                    </li>
+                                    <li class="el_dropdown--item input-dropdown__item">Сначала отрицательные</li>
+                                    <li class="el_dropdown--item input-dropdown__item">Сначала новые</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container">
+                    <div class="reviews-item">
+                        <div class="reviews-item__top">
+                            <img src="./img/reviews/1.png" alt="ФОТО" class="reviews-item__img">
+                            <div class="reviews-item__info">
+                                <div class="reviews-item__name">
+                                    Роман Сидоренко
+                                </div>
+                                <div class="reviews-item__raiting">
+                                    <div class="reviews-item__raiting-count">
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                    </div>
+                                    <span class="reviews-item__date">
+                                        20.03.2025
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__text">
+                            <p>
+                                Мастер приехал быстро, сразу нашёл причину неисправности. Всё объяснил и устранил на
+                                месте. Рекомендую!
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="reviews-item">
+                        <div class="reviews-item__top">
+                            <img src="./img/reviews/2.png" alt="ФОТО" class="reviews-item__img">
+                            <div class="reviews-item__info">
+                                <div class="reviews-item__name">
+                                    Роман Сидоренко
+                                </div>
+                                <div class="reviews-item__raiting">
+                                    <div class="reviews-item__raiting-count">
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star star_no-full"></div>
+                                    </div>
+                                    <span class="reviews-item__date">
+                                        20.03.2025
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__text">
+                            <p>
+                                Очень вежливый и аккуратный специалист.
+                            </p>
+                            <p>
+                                Приехал вовремя, всё сделал быстро. Буду обращаться ещё.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="reviews-item">
+                        <div class="reviews-item__top">
+                            <img src="./img/reviews/1.png" alt="ФОТО" class="reviews-item__img">
+                            <div class="reviews-item__info">
+                                <div class="reviews-item__name">
+                                    Роман Сидоренко
+                                </div>
+                                <div class="reviews-item__raiting">
+                                    <div class="reviews-item__raiting-count">
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star "></div>
+                                    </div>
+                                    <span class="reviews-item__date">
+                                        20.03.2025
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__text">
+                            <p>
+                                Очень вежливый и аккуратный специалист.
+                            </p>
+                            <p>
+                                Приехал вовремя, всё сделал быстро.
+
+                            </p>
+                            <p>
+                                Буду обращаться ещё.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="reviews-container_bottom">
+                    <a href="./" class="btn btn_second btn--icon-arrow">Показать еще</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container footer-container">
@@ -1687,7 +2435,7 @@
     </footer>
 
     <div class="modal modal_call">
-        <div class="modal__content">
+        <div class="modal__content modal_form__content">
             <form class="block__form">
                 <div class="close_modal"></div>
                 <div class="block__form-title">
@@ -1695,7 +2443,8 @@
                 </div>
                 <label class="input-label">
                     <span class="label_hidden">Введите номер Телефона</span>
-                    <input type="tel" class="phone-input" required="" placeholder="+7 (___) ___-__-__">
+                    <input type="tel" class="phone-input" name="phone" data-mask="+7 999 999 99 99" required
+                        placeholder="+7 (___) ___-__-__">
                     <span class="input-err-msg">Введите корректный номер</span>
                 </label>
 
@@ -1806,6 +2555,8 @@
         </div>
     </div>
 
+    <script src="./scripts/jquery_3_6_0.min.js"></script>
+    <script src="./scripts/jquery.maskedinput.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/reveal.js"></script>
     <script src="./scripts/header.js"></script>
@@ -1816,6 +2567,8 @@
     <script src="./scripts/swiper-product.js"></script>
     <script src="./scripts/swiper-examples.js"></script>
     <script src="./scripts/faq.js"></script>
+    <script src="./scripts/crew.js"></script>
+    <script src="./scripts/work.js"></script>
 </body>
 
 </html>
