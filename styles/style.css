@@ -2375,12 +2375,24 @@ label {
 .section_work {
     overflow: hidden;
 }
+.section_work .container {
+    position: relative;
+}
 .work-item {
     display: flex;
     flex-direction: column;
     gap: 18px;
      max-width: 300px;
 
+}
+.section_work  .custom-swiper-button-prev {
+    left: 0;
+}
+.section_work  .custom-swiper-button-next {
+    right: 0;
+}
+.work-swiper {
+    position: relative;
 }
 .work-item__img {
    
@@ -2400,11 +2412,12 @@ label {
 .custom-work-prev {
     transform: scale(-1, 1);
 }
+
 .work-swiper_nav {
     display: flex;
+    justify-content: center;
     gap: 16px;
     align-items: center;
-    margin-left: auto;
 }
 /* reviews */
 .reviews-filter {

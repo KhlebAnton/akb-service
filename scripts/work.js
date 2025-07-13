@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Навигация (стрелки)
         navigation: {
-            nextEl: '.custom-work-next',
-            prevEl: '.custom-work-prev',
+            nextEl: '.custom-swiper-button-next',
+            prevEl: '.custom-swiper-button-prev',
         },
         
        
